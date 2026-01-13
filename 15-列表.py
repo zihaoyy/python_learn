@@ -116,3 +116,31 @@ print(result)
 # 思路四 find + 切片
 result = max_str.find(min_str)
 print(result - 1)
+
+print('-' * 28)
+
+# 幸运数字6
+# 输入任意数字，生成1～该数字之间的列表，从中选取幸运数字（能被6整除）移到新列表lucky，并打印两个列表
+nums = []
+lucky = []
+
+input_num = int(input('请输入大于0的整数：'))
+
+for i in range(1, input_num + 1):
+    nums.append(i)
+
+for num in nums:
+    if num % 6 == 0:
+        lucky.append(num)
+
+print(f'nums: {nums}')
+print(f'lucky: {lucky}')
+
+print('-' * 28)
+
+# 合并版
+input_num = int(input('请输入大于0的整数：'))
+nums = [i for i in range(1, input_num + 1)]
+lucky = [i for i in nums if i % 6 == 0]
+print(f'nums: {nums}')
+print(f'lucky: {lucky}')
